@@ -1,9 +1,6 @@
-/**
- * INSPINIA - Responsive Admin Theme
- *
- */
+// register application module
 (function () {
-    angular.module('inspinia', [
+    angular.module('fnext', [
         'ui.router',                    // Routing
         'oc.lazyLoad',                  // ocLazyLoad
         'ui.bootstrap',                 // Ui Bootstrap

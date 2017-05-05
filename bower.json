@@ -1,10 +1,10 @@
 {
-  "name": "inspinia",
+  "name": "FNext",
   "version": "2.7.0",
   "authors": [
-    "Damian Dudziak - WebAppLayers"
+   
   ],
-  "description": "INSPINIA - Responsive Admin Theme",
+  "description": "FNext ",
   "main": "app/index.html",
   "private": true,
   "ignore": [

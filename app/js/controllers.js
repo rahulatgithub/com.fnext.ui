@@ -1,5 +1,5 @@
 /**
- * INSPINIA - Responsive Admin Theme
+ * fnext - Responsive Admin Theme
  *
  */
 
@@ -16,5 +16,5 @@ function MainCtrl() {
 
 
 angular
-    .module('inspinia')
+    .module('fnext')
     .controller('MainCtrl', MainCtrl)

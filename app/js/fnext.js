@@ -1,5 +1,5 @@
 /**
- * INSPINIA - Responsive Admin Theme
+ * fnext - Responsive Admin Theme
  * 2.6.2
  *
  * Custom scripts
