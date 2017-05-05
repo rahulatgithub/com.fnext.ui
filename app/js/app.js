@@ -1,7 +1,4 @@
-/**
- * INSPINIA - Responsive Admin Theme
- *
- */
+// register application module
 (function () {
     angular.module('inspinia', [
         'ui.router',                    // Routing

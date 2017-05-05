@@ -17,7 +17,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         // Project settings
-        inspinia: appConfig,
+        fnext: appConfig,
 
         // The grunt server settings
         connect: {
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     open: true,
-                    base: '<%= inspinia.dist %>'
+                    base: '<%= fnext.dist %>'
                 }
             }
         },
@@ -71,7 +71,7 @@ module.exports = function (grunt) {
                 },
             },
             js: {
-                files: ['<%= inspinia.app %>/scripts/{,*/}*.js'],
+                files: ['<%= fnext.app %>/scripts/{,*/}*.js'],
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 }
@@ -81,9 +81,9 @@ module.exports = function (grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= inspinia.app %>/**/*.html',
+                    '<%= fnext.app %>/**/*.html',
                     '.tmp/styles/{,*/}*.css',
-                    '<%= inspinia.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                    '<%= fnext.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             }
         },
@@ -102,8 +102,8 @@ module.exports = function (grunt) {
                     dot: true,
                     src: [
                         '.tmp',
-                        '<%= inspinia.dist %>/{,*/}*',
-                        '!<%= inspinia.dist %>/.git*'
+                        '<%= fnext.dist %>/{,*/}*',
+                        '!<%= fnext.dist %>/.git*'
                     ]
                 }]
             },
@@ -116,8 +116,8 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         dot: true,
-                        cwd: '<%= inspinia.app %>',
-                        dest: '<%= inspinia.dist %>',
+                        cwd: '<%= fnext.app %>',
+                        dest: '<%= fnext.dist %>',
                         src: [
                             '*.{ico,png,txt}',
                             '.htaccess',
@@ -132,20 +132,20 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: 'bower_components/fontawesome',
                         src: ['fonts/*.*'],
-                        dest: '<%= inspinia.dist %>'
+                        dest: '<%= fnext.dist %>'
                     },
                     {
                         expand: true,
                         dot: true,
                         cwd: 'bower_components/bootstrap',
                         src: ['fonts/*.*'],
-                        dest: '<%= inspinia.dist %>'
+                        dest: '<%= fnext.dist %>'
                     },
                 ]
             },
             styles: {
                 expand: true,
-                cwd: '<%= inspinia.app %>/styles',
+                cwd: '<%= fnext.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
             }
@@ -154,9 +154,9 @@ module.exports = function (grunt) {
         filerev: {
             dist: {
                 src: [
-                    '<%= inspinia.dist %>/scripts/{,*/}*.js',
-                    '<%= inspinia.dist %>/styles/{,*/}*.css',
-                    '<%= inspinia.dist %>/styles/fonts/*'
+                    '<%= fnext.dist %>/scripts/{,*/}*.js',
+                    '<%= fnext.dist %>/styles/{,*/}*.css',
+                    '<%= fnext.dist %>/styles/fonts/*'
                 ]
             }
         },
@@ -171,9 +171,9 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: '<%= inspinia.dist %>',
+                    cwd: '<%= fnext.dist %>',
                     src: ['*.html', 'views/{,*/}*.html'],
-                    dest: '<%= inspinia.dist %>'
+                    dest: '<%= fnext.dist %>'
                 }]
             }
         },
