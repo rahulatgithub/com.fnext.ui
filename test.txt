@@ -1,1 +1,3 @@
-dddssd
+for summer note 
+:
+https://www.npmjs.com/package/angular-summernote
