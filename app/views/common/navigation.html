@@ -26,12 +26,41 @@
             </li>
 
             <li ui-sref-active="active">
-                <a ui-sref="index.main"> <span class="nav-label">Top Posts</span> </a>
+                <a ui-sref="index.main"> <span class="nav-label">Top Posts</span> </a>            
+            </li>
+             <li ui-sref-active="active">
+                <a ui-sref="index.minor"> <span class="nav-label">My Favourites </span> </a>                
             </li>
             <li ui-sref-active="active">
-                <a ui-sref="index.minor"><span class="nav-label">Minor page</span></a>
+              <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">My Posts</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li ui-sref-active="active"><a ui-sref="index.mine">Answered</a></li>
+                     <li ui-sref-active="active"><a ui-sref="index.mine">Asked by me</a></li>
+                     <li ui-sref-active="active"><a ui-sref="index.mine">Drafts</a></li>
+                     </ul>
             </li>
-        </ul>
+            <li ui-sref-active="active">
+                <a ui-sref="index.minor"><span class="nav-label">Post something</span></a>
+            </li>
+             <li >
+                <a ui-sref="index.minor"><span class="nav-label">My interests</span> <span class="fa fa-wrench"></a>
+                  <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('dashboards')}">
+                  <ul class="tag-list" style="padding-left: 1">
+                    <li><a href=""><i class="fa fa-tag"></i> Family</a></li>
+                    <li><a href=""><i class="fa fa-tag"></i> Work</a></li>
+                    <li><a href=""><i class="fa fa-tag"></i> Home</a></li>
+                    <li><a href=""><i class="fa fa-tag"></i> Children</a></li>
+                    <li><a href=""><i class="fa fa-tag"></i> Holidays</a></li>
+                    <li><a href=""><i class="fa fa-tag"></i> Music</a></li>
+                    <li><a href=""><i class="fa fa-tag"></i> Photography</a></li>
+                    <li><a href=""><i class="fa fa-tag"></i> Film</a></li>
+                </ul>
+                     </ul>
+            </li>
+      
+        
 
+    
+      </ul>
     </div>
 </nav>

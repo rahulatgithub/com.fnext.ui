@@ -21,6 +21,11 @@ function config($stateProvider, $urlRouterProvider) {
             templateUrl: "views/main.html",
             data: { pageTitle: 'Example view' }
         })
+        .state('index.mine', {
+            url: "/main",
+            templateUrl: "views/main.html",
+            data: { pageTitle: 'Example view' }
+        })
         .state('index.minor', {
             url: "/minor",
             templateUrl: "views/minor.html",
