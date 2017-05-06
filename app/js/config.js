@@ -11,7 +11,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
 
     $ocLazyLoadProvider.config({
         // Set to true if you want to see what and when is dynamically loaded
-        debug: false
+        debug: true
     });
 
     $stateProvider
@@ -30,6 +30,24 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
             url: "/minor",
             templateUrl: "views/minor.html",
             data: { pageTitle: 'Example view' }
+        })
+        .state('index.post', {
+            url: "/post",
+            templateUrl: "views/post_editor.html",
+            data: { pageTitle: 'Example view' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/summernote/summernote.css','css/plugins/summernote/summernote-bs3.css','js/plugins/summernote/summernote.min.js']
+                        },
+                        {
+                            name: 'summernote',
+                            files: ['css/plugins/summernote/summernote.css','css/plugins/summernote/summernote-bs3.css','js/plugins/summernote/summernote.min.js','js/plugins/summernote/angular-summernote.min.js']
+                        }
+                    ]);
+                }
+            }
         })
 }
 angular

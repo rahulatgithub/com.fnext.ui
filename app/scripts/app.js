@@ -4,7 +4,8 @@
  */
 (function () {
     angular.module('inspinia', [
-        'ui.router',                    // Routing
+        'ui.router',  
+         'oc.lazyLoad',                    // Routing
         'ui.bootstrap'                 // Bootstrap
     ])
 })();
