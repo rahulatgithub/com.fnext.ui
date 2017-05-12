@@ -122,6 +122,8 @@ module.exports = function (grunt) {
                             '*.{ico,png,txt}',
                             '.htaccess',
                             '*.html',
+                        'css/plugins/summernote/{,*/}*.*',
+                        'js/plugins/summernote/{,*/}*.*',
                             'views/{,*/}*.html',
                             'styles/patterns/*.*',
                             'img/{,*/}*.*'
@@ -139,6 +141,20 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: 'bower_components/bootstrap',
                         src: ['fonts/*.*'],
+                        dest: '<%= fnext.dist %>'
+                    },
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: 'app/css/plugins/summernote',
+                        src: ['css/*.*'],
+                        dest: '<%= fnext.dist %>'
+                    },
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: 'app/js/plugins/summernote',
+                        src: ['js/*.*'],
                         dest: '<%= fnext.dist %>'
                     },
                 ]

@@ -6,12 +6,12 @@
  * Initial there are written stat for all view in theme.
  *
  */
-function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
+function config($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/index/main");
-$ocLazyLoadProvider.config({
-        // Set to true if you want to see what and when is dynamically loaded
-        debug: true
-    });
+// $ocLazyLoadProvider.config({
+//         // Set to true if you want to see what and when is dynamically loaded
+//         debug: true
+//     });
     $stateProvider
 
         .state('index', {
@@ -22,17 +22,17 @@ $ocLazyLoadProvider.config({
         .state('index.main', {
             url: "/main",
             templateUrl: "views/main.html",
-            data: { pageTitle: 'Example view' }
+            data: { pageTitle: 'FNext ' }
         })
         .state('index.mine', {
             url: "/main",
             templateUrl: "views/main.html",
-            data: { pageTitle: 'Example view' }
+            data: { pageTitle: 'FNext ' }
         })
         .state('index.post', {
             url: "/main",
             templateUrl: "views/post_editor.html",
-            data: { pageTitle: 'Example view' },
+            data: { pageTitle: 'FNext ' },
                     resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -50,7 +50,7 @@ $ocLazyLoadProvider.config({
         .state('index.minor', {
             url: "/minor",
             templateUrl: "views/minor.html",
-            data: { pageTitle: 'Example view' }
+            data: { pageTitle: 'FNext ' }
         })
 }
 angular
