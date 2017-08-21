@@ -1,3 +1,12 @@
-for summer note 
-:
-https://www.npmjs.com/package/angular-summernote
+
+
+npm install
+bower install
+bower install oclazyloader
+grunt build 
+grunt server
+
+app engine deployment :
+gcloud app deploy
+gcloud app browser
+
