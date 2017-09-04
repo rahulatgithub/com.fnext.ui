@@ -123,7 +123,10 @@ module.exports = function (grunt) {
                             '.htaccess',
                             '*.html',
                         'css/plugins/summernote/{,*/}*.*',
-                        'js/plugins/summernote/{,*/}*.*',
+                         'css/plugins/ui-select/{,*/}*.*',
+                         'js/plugins/ui-select/{,*/}*.*',
+                            'js/plugins/summernote/{,*/}*.*',
+                            'css/plugins/steps/{,*/}*.*',
                             'views/{,*/}*.html',
                             'styles/patterns/*.*',
                             'img/{,*/}*.*'
